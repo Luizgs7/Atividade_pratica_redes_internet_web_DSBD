@@ -2,6 +2,7 @@
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
 \usepackage{xcolor}
+\usepackage{graphicx}
 
 \title{Atividade 02 - Disciplina de Infraestrutura Computacional - Módulo 2}
 \author{Luiz Gabriel de Souza}
@@ -70,14 +71,13 @@ Na minha máquina local a rota padrão ("Default Route") é a "192.168.15.73". N
 
 Para encontrar o caminho entre a macalan e a minha máquina, eu usei o comando abaixo dentro da macalan:
 
-\textcolor{blue}{ip route get 200.17.202.62} 
+\begin{figure}
+    \includegraphics[width=\linewidth]{local_to_macalan_route.PNG}
+    \caption{Rota entre minha máquina local a macalan.}
+\end{figure}
 
-Que retonar o seguinte: 
-\textcolor{blue}{200.17.202.62 dev eth0 src 200.17.202.6 uid 3075} 
-
-Onde o primeiro IP é meu endereço local, da minha máquina.
-O resultado indica que é utilizada a placa de rede eth0 da macalan via IPv4 "200.17.202.6" e a porta 3075.
-
+O resultado indica todo o caminho e o tempo em milisegundos que a minha máquina e a macalan utilizam para se comunicar.
+Há referências a endereços da empresa Vivo e GVT que é o meu provedor local, indicando os endereços que os meus dados passam até chegar a macalan.
 
 \subsection{A partir de diferentes máquinas, o caminho (route) até a macalan muda?}
 

@@ -1,5 +1,3 @@
 pandas
-socketserver
-http.server
-json
-re
+flask
+gunicorn
